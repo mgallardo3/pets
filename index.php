@@ -22,7 +22,8 @@ $f3 -> set('DEBUG', 3);
 //Define a default route
 $f3->route('GET /', FUNCTION()
 {
-    echo "Pet home";
+    $view = new Template();
+    echo $view-> render('views/home.html');
 });
 
 //run Fat-free
